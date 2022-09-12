@@ -1,12 +1,70 @@
 <% layout('layout/boilerplate') %>
-<form action="/campgrounds" method="post">
-  <div>
-    <label for="title">Campground Name:</label>
-    <input type="text" name="campground[title]" id="title" />
+<div class="row">
+  <h1 class="text-center">New Campground</h1>
+  <div class="col-6 offset-3">
+    <form action="/campgrounds" method="post">
+      <div class="mb-3">
+        <label class="form-label" for="title">Campground Name:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[title]"
+          id="title"
+          placeholder="Campground Name"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Campground location:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[location]"
+          id="location"
+          placeholder="Campground Location"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Campground Image Url:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[image]"
+          id="image"
+          placeholder="Campground Image Url"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Campground Price:</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="price-label">₦</span>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            placeholder="0.00₦"
+            aria-label="price"
+            aria-describedby="price-label"
+            name="campground[price]"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description"
+          >Campground Description:</label
+        >
+        <textarea
+          class="form-control"
+          type="text"
+          name="campground[description]"
+          id="description"
+        ></textarea>
+      </div>
+      <div class="row mb-3">
+        <button class="btn btn-success col-auto mx-2">Add Campground</button>
+        <a href="/campgrounds" class="btn btn-primary col-auto mx-2"
+          >Back to Campgrounds</a
+        >
+      </div>
+    </form>
   </div>
-  <div>
-    <label for="location">Campground location:</label>
-    <input type="text" name="campground[location]" id="location" />
-  </div>
-  <button>Add Campground</button>
-</form>
+</div>

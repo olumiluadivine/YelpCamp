@@ -23,7 +23,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 app.get('/', (req, res) => {
-    console.log(req.reqTime)
     res.render('home')
 })
 
